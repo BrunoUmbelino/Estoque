@@ -1,0 +1,36 @@
+﻿@model IEnumerable<MeuEstoque.Models.Classes.Categoria>
+
+<h2>Categorias</h2>
+
+<table class="table">
+    <thead>
+        <tr>
+            <td>
+                @Html.DisplayNameFor(m => m.Id)
+            </td>
+            <td>
+                @Html.DisplayNameFor(m => m.Nome)
+            </td>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var item in Model)
+        {
+            <tr>
+                <td>
+                    @Html.DisplayFor(m => item.Id)
+                </td>
+                <td>
+                    @Html.DisplayFor(m => item.Nome)
+                </td>
+                <td>
+                    @Html.ActionLink("Editar","Editar", new { id = item.Id})
+                    /
+                    @Html.ActionLink("Apagar", "Apagar", new { id = item.Id })
+                </td>
+            </tr>
+        }
+    </tbody>
+</table>
+<br />
+@Html.ActionLink("Criar Nova Categoria", "Criar", "Categoria",  new { @class = "btn btn-success" })

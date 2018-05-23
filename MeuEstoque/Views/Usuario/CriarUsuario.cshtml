@@ -1,0 +1,40 @@
+﻿@model MeuEstoque.Models.Classes.Usuario
+
+@{
+    ViewBag.Title = "CriarUsuario";
+}
+
+<h2>Criar Novo Usuario</h2>
+
+@using (Html.BeginForm("CriarUsuario", "Usuario", FormMethod.Post))
+{
+    @Html.AntiForgeryToken()
+    @Html.ValidationSummary(true, "", new { @class = "text-danger" })
+
+    <div class="form-group">
+        @Html.LabelFor(m => m.Email, "E-mail")
+        @Html.TextBoxFor(m => m.Email, new { @class = "form-control" })
+        @Html.ValidationMessageFor(m => m.Email, "", new { @class = "text-danger" })
+    </div>
+
+    <div class="form-group">
+        @Html.LabelFor(m => m.NomeCompleto, "Nome Completo")
+        @Html.TextBoxFor(m => m.NomeCompleto, new { @class = "form-control" })
+        @Html.ValidationMessageFor(m => m.NomeCompleto, "", new { @class = "text-danger" })
+    </div>
+
+    <div class="form-group">
+        @Html.LabelFor(m => m.Senha, "Senha")
+        @Html.TextBoxFor(m => m.Senha, new { @class = "form-control" })
+        @Html.ValidationMessageFor(m => m.Senha, "", new { @class = "text-danger" })
+    </div>
+
+    <div class="form-group">
+        @Html.LabelFor(m => m.SenhaConfirmada, "Confirme a senha")
+        @Html.TextBoxFor(m => m.SenhaConfirmada, new { @class = "form-control" })
+        @Html.ValidationMessageFor(m => m.SenhaConfirmada, "", new { @class = "text-danger" })
+    </div>
+
+    <br />
+        <input type="submit" value="Criar" />
+}

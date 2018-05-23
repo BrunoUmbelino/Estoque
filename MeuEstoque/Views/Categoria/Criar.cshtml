@@ -1,0 +1,15 @@
+﻿@model MeuEstoque.Models.Classes.Categoria
+
+@using (Html.BeginForm("Criar", "Categoria", FormMethod.Post))
+{
+    @Html.AntiForgeryToken();
+
+    <div class="form-group">
+        @Html.LabelFor(m => m.Nome, "Nome")
+        @Html.TextBoxFor(m => m.Nome, new { @class = "form-control"})
+        @Html.ValidationMessageFor(m => m.Nome)
+    </div>
+    <input type="submit" value="Criar" class="btn btn-default"/>
+}
+<br />
+@Html.ActionLink("Voltar", "Index")

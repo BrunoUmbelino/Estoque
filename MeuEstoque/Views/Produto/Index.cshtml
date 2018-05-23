@@ -1,0 +1,63 @@
+﻿@model IEnumerable<MeuEstoque.Models.Classes.Produto>
+
+<h2>Produtos</h2>
+
+<table class="table">
+    <thead>
+        <tr>
+            <td>
+                @Html.DisplayNameFor(m => m.Id)
+            </td>
+            <td>
+                @Html.DisplayNameFor(m => m.Nome)
+            </td>
+            <td>
+                @Html.DisplayNameFor(m => m.Peso)
+            </td>
+            <td>
+                @Html.DisplayNameFor(m => m.Quantidade)
+            </td>
+            <td>
+                @Html.DisplayNameFor(m => m.PrecoUnitario)
+            </td>
+            <td>
+                @Html.DisplayNameFor(m => m.Categoria)
+            </td>
+            <td>
+               
+            </td>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var item in Model)
+        {
+            <tr>
+                <td>
+                    @Html.DisplayFor(m => item.Id)
+                </td>
+                <td>
+                    @Html.DisplayFor(m => item.Nome)
+                </td>
+                <td>
+                    @Html.DisplayFor(m => item.Peso)
+                </td>
+                <td>
+                    @Html.DisplayFor(m => item.Quantidade)
+                </td>
+                <td>
+                    @Html.DisplayFor(m => item.PrecoUnitario)
+                </td>
+                <td>
+                    @Html.DisplayFor(m => item.Categoria.Nome)
+                </td>
+                <td>
+                    @Html.ActionLink("Editar", "Editar", new { id = item.Id})
+                    /
+                    @Html.ActionLink("Apagar", "Apagar", new { id = item.Id })
+                </td>
+            </tr>
+        }
+    </tbody>
+</table>
+
+@Html.ActionLink("Criar Novo Produto", "Criar", "Produto", new { @class = "btn btn-success" })
