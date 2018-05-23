@@ -137,6 +137,10 @@
     <Compile Include="Migrations\201805220013517_QuantideParaQuantidade.Designer.cs">
       <DependentUpon>201805220013517_QuantideParaQuantidade.cs</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\201805231936175_dataannotation.cs" />
+    <Compile Include="Migrations\201805231936175_dataannotation.Designer.cs">
+      <DependentUpon>201805231936175_dataannotation.cs</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\Classes\Categoria.cs" />
     <Compile Include="Models\Classes\Produto.cs" />
@@ -182,6 +186,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Migrations\201805220013517_QuantideParaQuantidade.resx">
       <DependentUpon>201805220013517_QuantideParaQuantidade.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201805231936175_dataannotation.resx">
+      <DependentUpon>201805231936175_dataannotation.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <PropertyGroup>

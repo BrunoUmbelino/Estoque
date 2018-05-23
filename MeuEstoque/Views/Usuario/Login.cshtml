@@ -18,7 +18,7 @@
     </div>
     <div class="form-group">
         @Html.LabelFor(m => m.Senha, "Senha")
-        @Html.TextBoxFor(m => m.Senha, new { @class = "form-control" })
+        @Html.PasswordFor(m => m.Senha, new { @class = "form-control" })
         @Html.ValidationMessageFor(m => m.Senha, "", new { @class = "text-danger" })
     </div>
     <br />
