@@ -164,6 +164,7 @@
     <Content Include="Views\Categoria\Apagar.cshtml" />
     <Content Include="Views\Produto\Editar.cshtml" />
     <Content Include="Views\Produto\Apagar.cshtml" />
+    <Content Include="Views\Shared\_MenuSuperior.cshtml" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>

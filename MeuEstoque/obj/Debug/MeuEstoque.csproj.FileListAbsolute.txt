@@ -60,3 +60,34 @@ D:\T.I\Projetos\ASP MVC\ESTOQUE\MeuEstoque\obj\Debug\MeuEstoque.csproj.CoreCompi
 D:\T.I\Projetos\ASP MVC\ESTOQUE\MeuEstoque\obj\Debug\MeuEstoque.dll
 D:\T.I\Projetos\ASP MVC\ESTOQUE\MeuEstoque\obj\Debug\MeuEstoque.pdb
 D:\T.I\Projetos\ASP MVC\ESTOQUE\MeuEstoque\obj\Debug\MeuEstoque.Migrations.dataannotation.resources
+D:\T.I\Projetos\Repositorios\Estoque\Estoque\MeuEstoque\bin\MeuEstoque.dll.config
+D:\T.I\Projetos\Repositorios\Estoque\Estoque\MeuEstoque\bin\MeuEstoque.dll
+D:\T.I\Projetos\Repositorios\Estoque\Estoque\MeuEstoque\bin\MeuEstoque.pdb
+D:\T.I\Projetos\Repositorios\Estoque\Estoque\MeuEstoque\bin\EntityFramework.dll
+D:\T.I\Projetos\Repositorios\Estoque\Estoque\MeuEstoque\bin\EntityFramework.SqlServer.dll
+D:\T.I\Projetos\Repositorios\Estoque\Estoque\MeuEstoque\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.dll
+D:\T.I\Projetos\Repositorios\Estoque\Estoque\MeuEstoque\bin\Microsoft.Web.Infrastructure.dll
+D:\T.I\Projetos\Repositorios\Estoque\Estoque\MeuEstoque\bin\System.Web.Helpers.dll
+D:\T.I\Projetos\Repositorios\Estoque\Estoque\MeuEstoque\bin\System.Web.Mvc.dll
+D:\T.I\Projetos\Repositorios\Estoque\Estoque\MeuEstoque\bin\System.Web.Razor.dll
+D:\T.I\Projetos\Repositorios\Estoque\Estoque\MeuEstoque\bin\System.Web.Webpages.Deployment.dll
+D:\T.I\Projetos\Repositorios\Estoque\Estoque\MeuEstoque\bin\System.Web.Webpages.dll
+D:\T.I\Projetos\Repositorios\Estoque\Estoque\MeuEstoque\bin\System.Web.Webpages.Razor.dll
+D:\T.I\Projetos\Repositorios\Estoque\Estoque\MeuEstoque\bin\EntityFramework.xml
+D:\T.I\Projetos\Repositorios\Estoque\Estoque\MeuEstoque\bin\EntityFramework.SqlServer.xml
+D:\T.I\Projetos\Repositorios\Estoque\Estoque\MeuEstoque\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.xml
+D:\T.I\Projetos\Repositorios\Estoque\Estoque\MeuEstoque\bin\System.Web.Razor.xml
+D:\T.I\Projetos\Repositorios\Estoque\Estoque\MeuEstoque\bin\System.Web.Webpages.xml
+D:\T.I\Projetos\Repositorios\Estoque\Estoque\MeuEstoque\bin\System.Web.Webpages.Deployment.xml
+D:\T.I\Projetos\Repositorios\Estoque\Estoque\MeuEstoque\bin\System.Web.Webpages.Razor.xml
+D:\T.I\Projetos\Repositorios\Estoque\Estoque\MeuEstoque\bin\System.Web.Helpers.xml
+D:\T.I\Projetos\Repositorios\Estoque\Estoque\MeuEstoque\bin\System.Web.Mvc.xml
+D:\T.I\Projetos\Repositorios\Estoque\Estoque\MeuEstoque\obj\Debug\MeuEstoque.Migrations.Inicio.resources
+D:\T.I\Projetos\Repositorios\Estoque\Estoque\MeuEstoque\obj\Debug\MeuEstoque.Migrations.ProdutoECategoria.resources
+D:\T.I\Projetos\Repositorios\Estoque\Estoque\MeuEstoque\obj\Debug\MeuEstoque.Migrations.CategoriaID.resources
+D:\T.I\Projetos\Repositorios\Estoque\Estoque\MeuEstoque\obj\Debug\MeuEstoque.Migrations.QuantideParaQuantidade.resources
+D:\T.I\Projetos\Repositorios\Estoque\Estoque\MeuEstoque\obj\Debug\MeuEstoque.Migrations.dataannotation.resources
+D:\T.I\Projetos\Repositorios\Estoque\Estoque\MeuEstoque\obj\Debug\MeuEstoque.csproj.GenerateResource.Cache
+D:\T.I\Projetos\Repositorios\Estoque\Estoque\MeuEstoque\obj\Debug\MeuEstoque.csproj.CoreCompileInputs.cache
+D:\T.I\Projetos\Repositorios\Estoque\Estoque\MeuEstoque\obj\Debug\MeuEstoque.dll
+D:\T.I\Projetos\Repositorios\Estoque\Estoque\MeuEstoque\obj\Debug\MeuEstoque.pdb

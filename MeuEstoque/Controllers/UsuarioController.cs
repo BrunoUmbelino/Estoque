@@ -44,5 +44,11 @@ namespace MeuEstoque.Controllers
             }
             return View();
         }
+
+        public ActionResult Logout()
+        {
+            FormsAuthentication.SignOut();
+            return View("Login");
+        }
     }
 }
