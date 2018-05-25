@@ -1,4 +1,5 @@
-﻿using System;
+﻿using MeuEstoque.Models.Classes;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Web;
@@ -10,9 +11,10 @@ namespace MeuEstoque.Controllers
     public class HomeController : Controller
     {
         // GET: Home
-        public ActionResult Index()
+        public ActionResult Index(Usuario Usuario)
         {
-            return View();
+            Usuario usuarioLogado = Usuario; 
+            return View(Usuario);
         }
     }
 }

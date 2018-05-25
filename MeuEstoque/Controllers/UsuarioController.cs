@@ -1,5 +1,6 @@
 ﻿using MeuEstoque.Models.Classes;
 using MeuEstoque.Models.Contexto;
+using System;
 using System.Linq;
 using System.Net;
 using System.Web.Mvc;
@@ -19,12 +20,13 @@ namespace MeuEstoque.Controllers
         [HttpPost]
         public ActionResult Login(Usuario usuario)
         { 
-            var testeLogin = db.Usuarios.Where(m => m.Email == usuario.Email).FirstOrDefault();
+            Usuario testeLogin = db.Usuarios.Where(m => m.Email == usuario.Email).FirstOrDefault();
             if (testeLogin != null && testeLogin.Senha == usuario.Senha)
             {
                 FormsAuthentication.SetAuthCookie(testeLogin.Email, false);
                 Session["UsuarioLogado"] = testeLogin.NomeCompleto;
-                return RedirectToAction("Index", "Home");
+                Session["UsuarioId"] = testeLogin.Id;
+                return RedirectToAction("Index", "Home", testeLogin);
             }
             else ModelState.AddModelError("", "Login ou senha inválidos");
             return View();
@@ -55,13 +57,10 @@ namespace MeuEstoque.Controllers
             return View();
         }
 
-        public ActionResult MinhaConta(int? id)
+        public ActionResult MinhaConta()
         {
-            if (id == null)
-            {
-                return new HttpStatusCodeResult(HttpStatusCode.BadRequest);
-            }
-            Usuario usuario = db.Usuarios.FirstOrDefault();
+            int id = Convert.ToInt32(Session["UsuarioId"]);
+            Usuario usuario = db.Usuarios.Find(id);
             if (usuario == null)
             {
                 return HttpNotFound();
