@@ -1,6 +1,7 @@
 ﻿using MeuEstoque.Models.Classes;
 using MeuEstoque.Models.Contexto;
 using System.Linq;
+using System.Net;
 using System.Web.Mvc;
 using System.Web.Security;
 
@@ -22,10 +23,19 @@ namespace MeuEstoque.Controllers
             if (testeLogin != null && testeLogin.Senha == usuario.Senha)
             {
                 FormsAuthentication.SetAuthCookie(testeLogin.Email, false);
+                Session["UsuarioLogado"] = testeLogin.NomeCompleto;
                 return RedirectToAction("Index", "Home");
             }
             else ModelState.AddModelError("", "Login ou senha inválidos");
             return View();
+        }
+
+
+        public ActionResult Logout()
+        {
+            FormsAuthentication.SignOut();
+            Session.Abandon();
+            return RedirectToAction("Login");
         }
 
         public ActionResult CriarUsuario()
@@ -45,10 +55,18 @@ namespace MeuEstoque.Controllers
             return View();
         }
 
-        public ActionResult Logout()
+        public ActionResult MinhaConta(int? id)
         {
-            FormsAuthentication.SignOut();
-            return View("Login");
+            if (id == null)
+            {
+                return new HttpStatusCodeResult(HttpStatusCode.BadRequest);
+            }
+            Usuario usuario = db.Usuarios.FirstOrDefault();
+            if (usuario == null)
+            {
+                return HttpNotFound();
+            }
+            return View(usuario);
         }
     }
 }

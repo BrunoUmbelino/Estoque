@@ -12,8 +12,12 @@
                 @Html.ActionLink("Home", "Index", "Home", new { area = "" }, new { @class = "navbar-brand" })
                 @Html.ActionLink("Categorias", "Index", "Categoria", new { area = "" }, new { @class = "navbar-brand" })
                 @Html.ActionLink("Produtos", "Index", "Produto", new { area = "" }, new { @class = "navbar-brand" })
-                @Html.ActionLink("Sair", "Logout", "Usuario", new { area = "" }, new { @class = "pull-right" })
             </ul>
+                @if (Session["Usuariologado"] != null) {
+                <p class="navbar-text pull-right">Bem Vindo @Session["Usuariologado"] /
+                    @Html.ActionLink("Deslogar", "Logout", "Usuario")
+                </p>
+                }
         </div>
     </div>
 </div>

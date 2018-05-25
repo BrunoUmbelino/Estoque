@@ -91,3 +91,4 @@ D:\T.I\Projetos\Repositorios\Estoque\Estoque\MeuEstoque\obj\Debug\MeuEstoque.csp
 D:\T.I\Projetos\Repositorios\Estoque\Estoque\MeuEstoque\obj\Debug\MeuEstoque.csproj.CoreCompileInputs.cache
 D:\T.I\Projetos\Repositorios\Estoque\Estoque\MeuEstoque\obj\Debug\MeuEstoque.dll
 D:\T.I\Projetos\Repositorios\Estoque\Estoque\MeuEstoque\obj\Debug\MeuEstoque.pdb
+D:\T.I\Projetos\Repositorios\Estoque\Estoque\MeuEstoque\obj\Debug\MeuEstoque.csprojResolveAssemblyReference.cache

@@ -1,0 +1,43 @@
+﻿@model MeuEstoque.Models.Classes.Usuario
+
+@{
+    ViewBag.Title = "MinhaConta";
+}
+
+<h2>MinhaConta</h2>
+
+@using (Html.BeginForm())
+{
+    @Html.AntiForgeryToken()
+
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(u => u.Id)
+        </dt>
+        <dd>
+            @Html.DisplayFor(u => u.Id)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(u => u.NomeCompleto)
+        </dt>
+        <dd>
+            @Html.DisplayFor(u => u.NomeCompleto)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(u => u.Email)
+        </dt>
+        <dd>
+            @Html.DisplayFor(u => u.Email)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(u => u.Senha)
+        </dt>
+        <dd>
+            @Html.DisplayFor(u => u.Senha)
+        </dd>
+    </dl>
+}
+<br />
