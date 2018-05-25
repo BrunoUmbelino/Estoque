@@ -1,6 +1,7 @@
 ﻿using MeuEstoque.Models.Classes;
 using MeuEstoque.Models.Contexto;
 using System;
+using System.Data.Entity;
 using System.Linq;
 using System.Net;
 using System.Web.Mvc;
@@ -19,19 +20,18 @@ namespace MeuEstoque.Controllers
 
         [HttpPost]
         public ActionResult Login(Usuario usuario)
-        { 
+        {
             Usuario testeLogin = db.Usuarios.Where(m => m.Email == usuario.Email).FirstOrDefault();
             if (testeLogin != null && testeLogin.Senha == usuario.Senha)
             {
                 FormsAuthentication.SetAuthCookie(testeLogin.Email, false);
                 Session["UsuarioLogado"] = testeLogin.NomeCompleto;
                 Session["UsuarioId"] = testeLogin.Id;
-                return RedirectToAction("Index", "Home", testeLogin);
+                return RedirectToAction("Index", "Home");
             }
             else ModelState.AddModelError("", "Login ou senha inválidos");
             return View();
         }
-
 
         public ActionResult Logout()
         {
@@ -46,6 +46,7 @@ namespace MeuEstoque.Controllers
         }
 
         [HttpPost]
+        [ValidateAntiForgeryToken]
         public ActionResult CriarUsuario([Bind(Include = "Id,NomeCompleto,Email,Senha,SenhaConfirmada")] Usuario usuario)
         {
             if (ModelState.IsValid)
@@ -57,6 +58,7 @@ namespace MeuEstoque.Controllers
             return View();
         }
 
+        [Authorize]
         public ActionResult MinhaConta()
         {
             int id = Convert.ToInt32(Session["UsuarioId"]);
@@ -64,6 +66,32 @@ namespace MeuEstoque.Controllers
             if (usuario == null)
             {
                 return HttpNotFound();
+            }
+            return View(usuario);
+        }
+
+        [Authorize]
+        public ActionResult Editar()
+        {
+            int id = Convert.ToInt32(Session["UsuarioId"]);
+            Usuario usuario = db.Usuarios.Find(id);
+            if (usuario == null)
+            {
+                return HttpNotFound();
+            }
+            return View(usuario);
+        }
+
+        [HttpPost]
+        [ValidateAntiForgeryToken]
+        [Authorize]
+        public ActionResult Editar([Bind(Include ="Id, NomeCompleto, Email, Senha, SenhaConfirmada")]Usuario usuario)
+        {
+            if (ModelState.IsValid)
+            {
+                db.Entry(usuario).State = EntityState.Modified;
+                db.SaveChanges();
+                return RedirectToAction("MinhaConta");
             }
             return View(usuario);
         }

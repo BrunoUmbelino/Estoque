@@ -14,7 +14,7 @@
                 @Html.ActionLink("Produtos", "Index", "Produto", new { area = "" }, new { @class = "navbar-brand" })
             </ul>
                 @if (Session["Usuariologado"] != null) {
-                <p class="navbar-text pull-right">Bem Vindo @Session["Usuariologado"] /
+                <p class="navbar-text pull-right">Olá @Session["Usuariologado"] /
                     @Html.ActionLink("Deslogar", "Logout", "Usuario")
                 </p>
                 }
